@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vedanti — Web Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Vedanti, a Computer Science student and aspiring web developer.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- =========================================================
+     NAVBAR — tabs named like file extensions matching each section
+     ========================================================= -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="logo"><span class="tag">&lt;</span><span class="name">Vedanti Thosar</span><span
+          class="tag">/&gt;</span></a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-tabs" id="navTabs">
+        <li><a href="#home" class="nav-tab active" data-tab>home</a></li>
+        <li><a href="#about" class="nav-tab" data-tab>about</a></li>
+        <li><a href="#skills" class="nav-tab" data-tab>skills</a></li>
+        <li><a href="#projects" class="nav-tab" data-tab>projects</a></li>
+        <li><a href="#experience" class="nav-tab" data-tab>experience</a></li>
+        <li><a href="#contact" class="nav-tab" data-tab>contact</a></li>
+      </ul>
+
+      <a href="#contact" class="btn btn-primary nav-cta">Hire Me</a>
+    </div>
+  </nav>
+
+  <!-- =========================================================
+     HERO — stylised "PORTFOLIO" wordmark + dedicated photo spot
+     ========================================================= -->
+  <header class="hero" id="home">
+    <div class="hero-glow" id="heroGlow"></div>
+    <div class="container hero-grid">
+
+      <div class="hero-text">
+
+        <div class="status-pill fade-up" style="--d:.05s">
+          <span class="status-dot"></span>
+          Open to Internship
+        </div>
+
+        <!-- Stylised hero wordmark. Purely decorative, hidden from screen readers
+           since the real heading (your name) below carries the meaning. -->
+        <p class="portfolio-mark fade-up" style="--d:.15s" aria-hidden="true">PORTF<span class="hot">O</span>LIO</p>
+
+        <h1 class="hero-name fade-up" style="--d:.25s">Hi, I'm <span
+            class="accent-text"><!-- TODO: your name -->Vedanti</span></h1>
+
+        <p class="role-line fade-up" style="--d:.35s">
+          <span class="prompt">$</span> <span id="roleText"></span><span class="type-cursor"></span>
+        </p>
+
+        <p class="lead fade-up" style="--d:.45s">I’m Vedanti, a Computer Science student and beginner web developer who
+          is learning to build simple, creative, and user-friendly websites. I enjoy learning new skills and turning
+          ideas into projects.</p>
+        <div class="hero-actions fade-up" style="--d:.55s">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="Vedanti Thosar (Resume).pdf" class="btn btn-ghost" download><!-- TODO: point download to your resume.pdf -->Download Resume</a>
+        </div>
+
+        <!-- TODO: swap href values for your real profiles -->
+        <div class="social-row fade-up" style="--d:.65s">
+          <a href="https://github.com/Vedanti-0417" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 .5C5.73.5.98 5.24.98 11.52c0 4.86 3.15 8.98 7.52 10.43.55.1.75-.24.75-.53 0-.26-.01-1.13-.02-2.05-3.06.67-3.7-1.3-3.7-1.3-.5-1.27-1.22-1.6-1.22-1.6-1-.68.07-.67.07-.67 1.1.08 1.68 1.13 1.68 1.13.98 1.68 2.57 1.2 3.2.92.1-.71.39-1.2.7-1.48-2.44-.28-5-1.22-5-5.43 0-1.2.43-2.18 1.13-2.95-.11-.28-.49-1.4.11-2.92 0 0 .93-.3 3.04 1.13a10.6 10.6 0 0 1 5.54 0c2.11-1.43 3.04-1.13 3.04-1.13.6 1.52.22 2.64.11 2.92.7.77 1.13 1.75 1.13 2.95 0 4.22-2.57 5.15-5.02 5.42.4.35.75 1.03.75 2.08 0 1.5-.01 2.71-.01 3.08 0 .29.2.64.76.53 4.36-1.45 7.51-5.57 7.51-10.43C23.02 5.24 18.27.5 12 .5z" />
+            </svg>
+          </a>
+          <a href="www.linkedin.com/in/vedanti-thosar10" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45z" />
+            </svg>
+          </a>
+
+          <a href="vedantithosar10@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13zm2.2.5 7.8 6 7.8-6H4.2zM20 7.3l-7.4 5.7a1 1 0 0 1-1.2 0L4 7.3v11.2c0 .28.22.5.5.5h15a.5.5 0 0 0 .5-.5V7.3z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Your photo goes here — the one clear, dedicated spot for it -->
+      <div class="hero-photo fade-up" style="--d:.3s">
+        <div class="photo-frame">
+          <div class="photo-glow"></div>
+          <span class="corner-bracket tl" aria-hidden="true">{</span>
+          <div class="photo-box">
+            <!-- TODO: replace this whole placeholder with:-->
+            <img src="https://i.pinimg.com/736x/a1/22/7b/a1227baefd4e77a596940b3e6278f861.jpg" alt="Vedanti">
+            <svg class="placeholder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
+              <circle cx="12" cy="8" r="3.5" />
+              <path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6" />
+            </svg>
+          </div>
+          <span class="corner-bracket br" aria-hidden="true">}</span>
+          <span class="photo-badge"><span class="status-dot-sm"></span>Available for work</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="scroll-cue"><span class="line"></span> scroll</div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- =========================================================
+     ABOUT
+     ========================================================= -->
+    <section id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">about</p>
+          <h2 class="section-title">A little about me</h2>
+        </div>
+
+        <div class="about-grid reveal">
+          <div class="about-bio">
+            <p>Hi, I'm <strong>Vedanti Thosar</strong> — a Computer Science student and beginner web developer who
+              enjoys learning and building websites.</p>
+
+            <p>I’m currently exploring web development and improving my skills in HTML, CSS, JavaScript, and backend
+              basics. I like creating simple, clean, and user-friendly projects that help me learn by doing.</p>
+
+            <p>Along with coding, I enjoy learning new things, teaching students, and working on projects that improve
+              my creativity and confidence.</p>
+
+            <div class="stat-row">
+              <div class="stat">
+                <div class="num">3th</div>
+                <div class="label">// Year Student</div>
+              </div>
+              <div class="stat">
+                <div class="num">3+</div>
+                <div class="label">// Skills Learning</div>
+              </div>
+              <div class="stat">
+                <div class="num">10+</div>
+                <div class="label">// Students I teach</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- a little code-flavoured detail, fitting for "about.js" — it types
+           itself out once it scrolls into view -->
+          <div class="editor-window">
+            <div class="editor-titlebar">
+              <div class="dots"><span></span><span></span><span></span></div>
+              <div class="editor-filename">about.js</div>
+            </div>
+            <div class="editor-body">
+              <div class="gutter" id="gutter"></div>
+              <pre class="code" id="typedCode"></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+     SKILLS — chips colored like syntax tokens, grouped by category
+     ========================================================= -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">skills.json</p>
+          <h2 class="section-title">Skills I’m Learning</h2>
+          <p class="section-sub">Technologies and tools I’m currently learning and practicing.</p>
+        </div>
+
+        <div class="skills-grid reveal">
+          <div class="skill-card frontend">
+            <p class="cat-label">frontend</p>
+            <div class="chip-list">
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">Responsive Design</span>
+            </div>
+          </div>
+
+          <div class="skill-card backend">
+            <p class="cat-label">backend</p>
+            <div class="chip-list">
+              <span class="chip">Node.js</span>
+              <span class="chip">Express.js</span>
+              <span class="chip">MongoDB</span>
+              <span class="chip">Mongoose</span>
+            </div>
+          </div>
+
+          <div class="skill-card tools">
+            <p class="cat-label">tools &amp; other</p>
+            <div class="chip-list">
+              <span class="chip">Git</span>
+              <span class="chip">GitHub</span>
+              <span class="chip">VS Code</span>
+              <span class="chip">Canva</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+     PROJECTS — replace each card with your real work
+     ========================================================= -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">projects.jsx</p>
+          <h2 class="section-title">Projects</h2>
+          <p class="section-sub">I’m currently learning and building my web development projects. More projects will be
+            added here soon.</p>
+        </div>
+
+        <div class="project-grid reveal">
+          <div class="project-card">
+            <div class="project-thumb">
+              <svg class="placeholder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+                <rect x="3" y="4" width="18" height="14" rx="2" />
+                <path d="M3 9h18M9 4v14" />
+              </svg>
+            </div>
+            <div class="project-body">
+              <h3>Projects Coming Soon</h3>
+              <p>I’m currently working on improving my frontend and backend skills by building practice projects. This
+                section will be updated with my real projects soon.</p>
+              <div class="tag-row">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects-more">
+          <a href="https://github.com/Vedanti-0417" target="_blank" rel="noopener" class="btn btn-ghost">See my
+            GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+     EXPERIENCE — vertical log of roles / education
+     ========================================================= -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">experience</p>
+          <h2 class="section-title">Education & Experience</h2>
+        </div>
+
+        <div class="timeline reveal">
+
+          <div class="timeline-item">
+            <span class="timeline-date">2022 — Present</span>
+            <h3>Home Tuition Teacher</h3>
+            <p class="org">Self-employed</p>
+            <ul>
+              <li>Teaching school students at home and helping them understand subjects in a simple way.</li>
+              <li>Managing multiple students and improving communication, patience, and teaching skills.</li>
+              <li>Balancing studies with teaching responsibilities.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-date">2024 — Present</span>
+            <h3>B.Tech in Computer Science</h3>
+            <p class="org">JD College of Engineering and Management</p>
+            <ul>
+              <li>Currently pursuing Computer Science and building skills in web development.</li>
+              <li>Learning HTML, CSS, JavaScript, Node.js, Express, and MongoDB.</li>
+              <li>Working on practice projects to improve frontend and backend development skills.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-date">2026 — Present</span>
+            <h3>Web Development Learner</h3>
+            <p class="org">Self-learning & Practice Projects</p>
+            <ul>
+              <li>Practicing frontend and backend development through portfolio and mini projects.</li>
+              <li>Exploring how websites are built, styled, and connected with databases.</li>
+              <li>Focused on improving coding confidence and project-building skills.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+     CONTACT — terminal-styled form
+     ========================================================= -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">contact.sh</p>
+          <h2 class="section-title">Get in Touch</h2>
+        </div>
+
+        <div class="contact-grid reveal">
+          <div class="contact-info">
+            <p>If you'd like to connect, collaborate, or just say hi, feel free to reach out through email or my social
+              profiles.</p>
+
+            <div>
+              <div class="contact-detail">
+                <div class="icon-box">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13zm2.2.5 7.8 6 7.8-6H4.2zM20 7.3l-7.4 5.7a1 1 0 0 1-1.2 0L4 7.3v11.2c0 .28.22.5.5.5h15a.5.5 0 0 0 .5-.5V7.3z" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="label">EMAIL</p>
+                  <p class="value">vedantithosar10@gmail.com</p>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <div class="icon-box">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2C7.6 2 4 5.6 4 10c0 5.2 6.4 11 7.4 11.8.3.2.9.2 1.2 0C13.6 21 20 15.2 20 10c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="label">LOCATION</p>
+                  <p class="value">Maharashtra, India</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-row">
+              <a href="https://github.com/Vedanti-0417" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 .5C5.73.5.98 5.24.98 11.52c0 4.86 3.15 8.98 7.52 10.43.55.1.75-.24.75-.53 0-.26-.01-1.13-.02-2.05-3.06.67-3.7-1.3-3.7-1.3-.5-1.27-1.22-1.6-1.22-1.6-1-.68.07-.67.07-.67 1.1.08 1.68 1.13 1.68 1.13.98 1.68 2.57 1.2 3.2.92.1-.71.39-1.2.7-1.48-2.44-.28-5-1.22-5-5.43 0-1.2.43-2.18 1.13-2.95-.11-.28-.49-1.4.11-2.92 0 0 .93-.3 3.04 1.13a10.6 10.6 0 0 1 5.54 0c2.11-1.43 3.04-1.13 3.04-1.13.6 1.52.22 2.64.11 2.92.7.77 1.13 1.75 1.13 2.95 0 4.22-2.57 5.15-5.02 5.42.4.35.75 1.03.75 2.08 0 1.5-.01 2.71-.01 3.08 0 .29.2.64.76.53 4.36-1.45 7.51-5.57 7.51-10.43C23.02 5.24 18.27.5 12 .5z" />
+                </svg>
+              </a>
+
+              <a href="www.linkedin.com/in/vedanti-thosar10
+
+" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="shell-window">
+            <div class="shell-titlebar">
+              <div class="dots"><span></span><span></span><span></span></div>
+              <div class="editor-filename">contact</div>
+            </div>
+            <div class="shell-body">
+              <p class="shell-line"><span class="prompt">➜</span> ./connect-with-me</p>
+
+              <form id="contactForm">
+                <div class="form-field">
+                  <label for="name">--name <span class="req">(required)</span></label>
+                  <input type="text" id="name" name="name" placeholder="Vedanti Thosar" required>
+                </div>
+
+                <div class="form-field">
+                  <label for="email">--email <span class="req">(required)</span></label>
+                  <input type="email" id="email" name="email" placeholder="vedantithosar10@gmail.com" required>
+                </div>
+
+                <div class="form-field">
+                  <label for="message">--message <span class="req">(required)</span></label>
+                  <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+                </div>
+
+                <div class="submit-row">
+                  <button type="submit" class="btn btn-primary" id="submitBtn">Send Message</button>
+                  <span class="form-note">I’ll get back to you soon.</span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================
+     FOOTER
+     ========================================================= -->
+  <footer>
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Vedanti Thosar. Built with HTML, CSS &amp; JavaScript.</p>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M12 19V5M5 12l7-7 7 7" />
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
